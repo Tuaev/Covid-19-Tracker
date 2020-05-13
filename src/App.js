@@ -6,11 +6,7 @@ import styles from './App.module.css';
 function App() {
   const [data, setData] = useState({});
   useEffect(() => {
-    const fetchApi = async () => {
-      const data = await fetchData();
-      setData(data);
-    };
-    fetchApi();
+    (async () => setData(await fetchData()))();
   }, [setData]);
 
   return (
