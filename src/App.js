@@ -5,7 +5,7 @@ import styles from './App.module.css';
 
 function App() {
   const [data, setData] = useState({});
-  const [country, setCountry] = useState({});
+  const [country, setCountry] = useState('');
   useEffect(() => {
     (async () => setData(await fetchData()))();
   }, []);
